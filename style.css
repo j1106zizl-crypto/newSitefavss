@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0b0b0b; /* чёрный фон */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* центрируем карточки */
+.slider {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* карточка */
+.card {
+  width: 280px;
+  background: #141414;
+  border-radius: 18px;
+  box-shadow: 0 20px 45px rgba(120, 10, 20, 0.35);
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 28px 60px rgba(140, 15, 30, 0.55);
+}
+
+/* верх */
+.card-header {
+  background: #7a0f1c; /* тёмный алый */
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.card-header img {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  border: 4px solid #141414;
+  transform: translateY(45%);
+  background: #141414;
+  transition: transform 0.35s ease;
+}
+
+.card:hover .card-header img {
+  transform: translateY(45%) scale(1.08);
+}
+
+/* тело */
+.card-body {
+  padding: 72px 22px 26px;
+  text-align: center;
+}
+
+.card-body h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #f2f2f2;
+  margin-bottom: 8px;
+}
+
+.card-body p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #b5b5b5;
+  margin-bottom: 20px;
+}
+
+/* кнопка */
+.card-body button {
+  background: #7a0f1c;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.card-body button:hover {
+  background: #9b1426;
+  transform: scale(1.06);
+}
